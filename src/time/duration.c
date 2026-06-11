@@ -12,12 +12,21 @@
 #include "time/timex.h"
 
 // Common durations.
+#if defined(_MSC_VER)
+const Duration Nanosecond = 1ULL;
+const Duration Microsecond = 1000ULL * 1;     // 1000 * Nanosecond;
+const Duration Millisecond = 1000ULL * 1000;  // 1000 * Microsecond;
+const Duration Second = 1000ULL * 1000000;    // 1000 * Millisecond;
+const Duration Minute = 60ULL * 1000000000;   // 60 * Second;
+const Duration Hour = 60ULL * 60000000000;    // 60 * Minute;
+#else
 const Duration Nanosecond = 1;
 const Duration Microsecond = 1000 * Nanosecond;
 const Duration Millisecond = 1000 * Microsecond;
 const Duration Second = 1000 * Millisecond;
 const Duration Minute = 60 * Second;
 const Duration Hour = 60 * Minute;
+#endif
 
 #pragma region Conversion
 

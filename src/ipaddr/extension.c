@@ -3,7 +3,7 @@
 
 // IP address manipulation in SQLite.
 
-#ifdef __MINGW32__
+#if defined(__MINGW32__) || defined(_MSC_VER)
 #include <ws2tcpip.h>
 #else
 #include <arpa/inet.h>
@@ -37,7 +37,7 @@ struct ipaddress {
 
 static struct ipaddress* parse_ipaddress(const char* address) {
     struct ipaddress* ip = NULL;
-    unsigned char buf[sizeof(struct in6_addr)];
+    unsigned char buf[sizeof(struct in6_addr)] = {0};
     char* sep = strchr(address, '/');
     unsigned long masklen = 0;
     if (sep) {

@@ -23,6 +23,28 @@
 
 #pragma region Private
 
+#if defined(_MSC_VER)
+static const int64_t seconds_per_minute = 60LL;
+static const int64_t seconds_per_hour = 60LL * 60;
+static const int64_t seconds_per_day = 24LL * 3600;
+static const int64_t seconds_per_week = 7LL * 86400;
+static const int64_t days_per_400_years = 365LL * 400 + 97;
+static const int64_t days_per_100_years = 365LL * 100 + 24;
+static const int64_t days_per_4_years = 365LL * 4 + 1;
+
+// The unsigned zero year for internal calculations.
+// Must be 1 mod 400, and times before it will not compute correctly,
+// but otherwise can be changed at will.
+static const int64_t absolute_zero_year = -292277022399LL;
+
+// Offsets to convert between internal and absolute or Unix times.
+// = (absoluteZeroYear - internalYear) * 365.2425 * secondsPerDay
+static const int64_t absolute_to_internal = -9223371966579724800LL;
+static const int64_t internal_to_absolute = 9223371966579724800LL;
+
+static const int64_t unix_to_internal = (1969LL * 365 + 1969 / 4 - 1969 / 100 + 1969 / 400) * 86400;
+static const int64_t internal_to_unix = -2006054656;
+#else
 static const int64_t seconds_per_minute = 60;
 static const int64_t seconds_per_hour = 60 * seconds_per_minute;
 static const int64_t seconds_per_day = 24 * seconds_per_hour;
@@ -44,6 +66,7 @@ static const int64_t internal_to_absolute = -absolute_to_internal;
 static const int64_t unix_to_internal =
     (1969 * 365 + 1969 / 4 - 1969 / 100 + 1969 / 400) * seconds_per_day;
 static const int64_t internal_to_unix = -unix_to_internal;
+#endif
 
 // days_before[m] counts the number of days in a non-leap year
 // before month m begins. There is an entry for m=12, counting
@@ -171,8 +194,8 @@ static void abs_date(uint64_t abs, int* year, int* yday) {
     y += n;
     d -= 365 * n;
 
-    *year = y + absolute_zero_year;
-    *yday = d;
+    *year = (int)(y + absolute_zero_year);
+    *yday = (int)d;
 }
 
 static void abs_date_full(uint64_t abs, int* year, enum Month* month, int* day, int* yday) {
@@ -209,12 +232,12 @@ static void abs_date_full(uint64_t abs, int* year, enum Month* month, int* day, 
     *day = *day - begin + 1;
 }
 
-void abs_clock(uint64_t abs, int* hour, int* min, int* sec) {
-    *sec = abs % seconds_per_day;
-    *hour = *sec / seconds_per_hour;
-    *sec -= *hour * seconds_per_hour;
-    *min = *sec / seconds_per_minute;
-    *sec -= *min * seconds_per_minute;
+static void abs_clock(uint64_t abs, int* hour, int* min, int* sec) {
+    *sec = (int)(abs % seconds_per_day);
+    *hour = (int)(*sec / seconds_per_hour);
+    *sec -= (int)(*hour * seconds_per_hour);
+    *min = (int)(*sec / seconds_per_minute);
+    *sec -= (int)(*min * seconds_per_minute);
 }
 
 // tless_than_half reports whether x+x < y but avoids overflow,
@@ -260,7 +283,7 @@ static struct timespec timespec_now(void) {
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L && defined(TIME_UTC) && \
     !defined(__ANDROID__)
     // C11.
-    timespec_get(&ts, TIME_UTC);
+    (void)timespec_get(&ts, TIME_UTC);
 #elif defined(_POSIX_TIMERS) && (_POSIX_TIMERS > 0)
     // POSIX.
     clock_gettime(CLOCK_REALTIME, &ts);
@@ -327,7 +350,7 @@ Time time_date(int year,
     }
 
     // Add in days before today.
-    d += day - 1;
+    d += (int64_t)day - 1;
 
     // Add in time elapsed today.
     uint64_t abs = d * seconds_per_day;
@@ -385,19 +408,19 @@ void time_get_clock(Time t, int* hour, int* min, int* sec) {
 // time_get_hour returns the hour within the day specified by t, in the range [0, 23].
 int time_get_hour(Time t) {
     uint64_t abs = abs_time(t);
-    return (abs % seconds_per_day) / seconds_per_hour;
+    return (int)((abs % seconds_per_day) / seconds_per_hour);
 }
 
 // time_get_minute returns the minute offset within the hour specified by t, in the range [0, 59].
 int time_get_minute(Time t) {
     uint64_t abs = abs_time(t);
-    return (abs % seconds_per_hour) / seconds_per_minute;
+    return (int)((abs % seconds_per_hour) / seconds_per_minute);
 }
 
 // time_get_second returns the second offset within the minute specified by t, in the range [0, 59].
 int time_get_second(Time t) {
     uint64_t abs = abs_time(t);
-    return abs % seconds_per_minute;
+    return (int)(abs % seconds_per_minute);
 }
 
 // time_get_nano returns the nanosecond offset within the second specified by t,
@@ -467,7 +490,7 @@ Time time_unix(int64_t sec, int64_t nsec) {
             sec--;
         }
     }
-    return unix_time(sec, nsec);
+    return unix_time(sec, (int32_t)nsec);
 }
 
 // time_milli returns the Time corresponding to the given Unix time,
@@ -608,14 +631,14 @@ Time time_add(Time t, Duration d) {
         dsec--;
         nsec += 1e9;
     }
-    return (Time){t.sec + dsec, nsec};
+    return (Time){t.sec + dsec, (int32_t)nsec};
 }
 
 // time_sub returns the duration t-u. If the result exceeds the maximum (or minimum)
 // value that can be stored in a Duration, the maximum (or minimum) duration
 // will be returned.
 Duration time_sub(Time t, Time u) {
-    int64_t d = (t.sec - u.sec) * Second + (t.nsec - u.nsec);
+    int64_t d = (t.sec - u.sec) * Second + ((int64_t)t.nsec - u.nsec);
     if (time_equal(time_add(u, d), t)) {
         return d;  // d is correct
     }

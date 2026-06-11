@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <PCRE2Dir>$(SolutionDir)..\src\regexp\pcre2\</PCRE2Dir>
+    <ZipDir>C:\Program Files\7-Zip\</ZipDir>
+    <SQLITE_RELEASE_YEAR>2026</SQLITE_RELEASE_YEAR>
+    <SQLITE_VERSION>3530200</SQLITE_VERSION>
+    <SQLITE_BRANCH>3.36</SQLITE_BRANCH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="PCRE2Dir">
+      <Value>$(PCRE2Dir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ZipDir">
+      <Value>$(ZipDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SQLITE_RELEASE_YEAR">
+      <Value>$(SQLITE_RELEASE_YEAR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SQLITE_VERSION">
+      <Value>$(SQLITE_VERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SQLITE_BRANCH">
+      <Value>$(SQLITE_BRANCH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
