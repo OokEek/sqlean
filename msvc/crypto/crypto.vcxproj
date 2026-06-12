@@ -119,15 +119,8 @@
       <Command>
       </Command>
     </CustomBuildStep>
-    <PreBuildEvent>
-      <Command>curl -L --silent --skip-existing https://github.com/mackyle/sqlite/raw/branch-$(SQLITE_BRANCH)/src/test_windirent.h --output "$(SolutionDir)..\src\test_windirent.h"
-curl -L --silent --skip-existing https://github.com/cyan4973/xxhash/raw/v0.8.3/xxhash.h --output "$(SolutionDir)..\src\crypto\xxhash.impl.h"
-curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgamation-$(SQLITE_VERSION).zip --output src.zip
-"$(ZipDir)7z.exe" e -r -bso0 -aos src.zip -o$(SolutionDir)..\src\</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Get files...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -153,15 +146,8 @@ curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgama
       <Command>
       </Command>
     </CustomBuildStep>
-    <PreBuildEvent>
-      <Command>curl -L --silent --skip-existing https://github.com/mackyle/sqlite/raw/branch-$(SQLITE_BRANCH)/src/test_windirent.h --output "$(SolutionDir)..\src\test_windirent.h"
-curl -L --silent --skip-existing https://github.com/cyan4973/xxhash/raw/v0.8.3/xxhash.h --output "$(SolutionDir)..\src\crypto\xxhash.impl.h"
-curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgamation-$(SQLITE_VERSION).zip --output src.zip
-"$(ZipDir)7z.exe" e -r -bso0 -aos src.zip -o$(SolutionDir)..\src\</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Get files...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -184,15 +170,8 @@ curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgama
       <Command>
       </Command>
     </CustomBuildStep>
-    <PreBuildEvent>
-      <Command>curl -L --silent --skip-existing https://github.com/mackyle/sqlite/raw/branch-$(SQLITE_BRANCH)/src/test_windirent.h --output "$(SolutionDir)..\src\test_windirent.h"
-curl -L --silent --skip-existing https://github.com/cyan4973/xxhash/raw/v0.8.3/xxhash.h --output "$(SolutionDir)..\src\crypto\xxhash.impl.h"
-curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgamation-$(SQLITE_VERSION).zip --output src.zip
-"$(ZipDir)7z.exe" e -r -bso0 -aos src.zip -o$(SolutionDir)..\src\</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Get files...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -218,15 +197,8 @@ curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgama
       <Command>
       </Command>
     </CustomBuildStep>
-    <PreBuildEvent>
-      <Command>curl -L --silent --skip-existing https://github.com/mackyle/sqlite/raw/branch-$(SQLITE_BRANCH)/src/test_windirent.h --output "$(SolutionDir)..\src\test_windirent.h"
-curl -L --silent --skip-existing https://github.com/cyan4973/xxhash/raw/v0.8.3/xxhash.h --output "$(SolutionDir)..\src\crypto\xxhash.impl.h"
-curl -L --skip-existing http://sqlite.org/$(SQLITE_RELEASE_YEAR)/sqlite-amalgamation-$(SQLITE_VERSION).zip --output src.zip
-"$(ZipDir)7z.exe" e -r -bso0 -aos src.zip -o$(SolutionDir)..\src\</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Get files...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\crypto\base32.c" />
