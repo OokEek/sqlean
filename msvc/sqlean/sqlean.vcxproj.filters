@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\crypto">
+      <UniqueIdentifier>{f5e8a442-d4a6-46f0-ab39-94d4454b8010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\define">
+      <UniqueIdentifier>{fe30b839-5e41-48a3-90ef-8f9450a7b8c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fileio">
+      <UniqueIdentifier>{6ac7da14-9214-4f14-a8da-8cdc30db0878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fuzzy">
+      <UniqueIdentifier>{db002e63-e7ae-42bb-b877-b379f1266271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ipaddr">
+      <UniqueIdentifier>{12c90699-069c-4184-815c-1f05674eabce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{2fce398f-20f9-4715-9be5-aaad0495409e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\regexp">
+      <UniqueIdentifier>{d51259eb-5243-4952-9544-bcaeaca46267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stats">
+      <UniqueIdentifier>{06847e43-9216-4d30-ac85-c8c777cb2b40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\text">
+      <UniqueIdentifier>{148a1f46-7a04-483c-b825-96e86d2c24c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\time">
+      <UniqueIdentifier>{278a4cc3-3d43-4600-8566-f0deab52c471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\unicode">
+      <UniqueIdentifier>{377b792a-3900-44a4-b182-83f238333b8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\uuid">
+      <UniqueIdentifier>{6f344230-43b9-4953-a435-5782629ca760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vsv">
+      <UniqueIdentifier>{303969d0-58ca-4c75-aed1-0e04785e2e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\text\utf8">
+      <UniqueIdentifier>{23b6051b-2d5e-49f2-a561-f52f5e5f5e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\regexp\pcre2">
+      <UniqueIdentifier>{82fd2945-a95b-408c-ae64-3619616d4e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\crypto">
+      <UniqueIdentifier>{783f76b4-5c95-478f-b5f9-6296ef3bb43e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\define">
+      <UniqueIdentifier>{a91dd670-5ca9-4cd6-a87d-c0483938a3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fileio">
+      <UniqueIdentifier>{681e0200-622d-4729-8f2f-8dabf90ac187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fuzzy">
+      <UniqueIdentifier>{18a94671-5789-4669-a012-36dfceecb1d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ipaddr">
+      <UniqueIdentifier>{b003fc0e-f7e7-4999-b85c-f64fc0dae33e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{b0b58757-ee8d-4bda-b284-82f514b04e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\regexp">
+      <UniqueIdentifier>{ab6931ac-2b49-4b09-8cc1-ec502656389d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\regexp\pcre2">
+      <UniqueIdentifier>{19651d6d-f39d-4158-b359-44b843d6d1fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\stats">
+      <UniqueIdentifier>{6d19217e-82d0-4ed6-b293-447a17650b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\text">
+      <UniqueIdentifier>{956cb82b-2c89-43f4-a486-420acee4fda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\text\utf8">
+      <UniqueIdentifier>{b6c7a0da-6d6f-4bcc-a93d-57032336eb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\time">
+      <UniqueIdentifier>{61bafe7d-b023-444d-8936-e9292eab41fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\unicode">
+      <UniqueIdentifier>{497669ae-b0b5-429e-a31c-b4215849186a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\uuid">
+      <UniqueIdentifier>{eae070b5-892e-4539-bac0-ee3d8dbb9323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vsv">
+      <UniqueIdentifier>{d999524c-7c51-4de0-b138-cb5f83bf1934}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\sqlean.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\base32.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\base64.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\base85.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\blake3.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\extension.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\hex.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\md5.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\sha1.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\sha2.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\url.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\crypto\xxhash.h">
+      <Filter>Header Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\define\define.h">
+      <Filter>Header Files\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\define\extension.h">
+      <Filter>Header Files\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fileio\extension.h">
+      <Filter>Header Files\fileio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fileio\fileio.h">
+      <Filter>Header Files\fileio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fuzzy\common.h">
+      <Filter>Header Files\fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fuzzy\extension.h">
+      <Filter>Header Files\fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fuzzy\fuzzy.h">
+      <Filter>Header Files\fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ipaddr\extension.h">
+      <Filter>Header Files\ipaddr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\extension.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\constants.h">
+      <Filter>Header Files\regexp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\extension.h">
+      <Filter>Header Files\regexp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\regexp.h">
+      <Filter>Header Files\regexp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2_ucp.h">
+      <Filter>Header Files\regexp\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2_intmodedep.h">
+      <Filter>Header Files\regexp\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2_internal.h">
+      <Filter>Header Files\regexp\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2.h">
+      <Filter>Header Files\regexp\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\regexp\pcre2\config.h">
+      <Filter>Header Files\regexp\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stats\extension.h">
+      <Filter>Header Files\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stats\stats.h">
+      <Filter>Header Files\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\bstring.h">
+      <Filter>Header Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\extension.h">
+      <Filter>Header Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\rstring.h">
+      <Filter>Header Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\runes.h">
+      <Filter>Header Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\utf8\groups.h">
+      <Filter>Header Files\text\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\utf8\rune.h">
+      <Filter>Header Files\text\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\utf8\tables.h">
+      <Filter>Header Files\text\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\utf8\utf8.h">
+      <Filter>Header Files\text\utf8</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\time\extension.h">
+      <Filter>Header Files\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\time\timex.h">
+      <Filter>Header Files\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\unicode\extension.h">
+      <Filter>Header Files\unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\uuid\extension.h">
+      <Filter>Header Files\uuid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vsv\extension.h">
+      <Filter>Header Files\vsv</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\sqlite3-sqlean.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\base32.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\base64.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\base85.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\blake3.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\extension.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hex.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\md5.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha1.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha2.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\url.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\xxhash.c">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\define\eval.c">
+      <Filter>Source Files\define</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\define\extension.c">
+      <Filter>Source Files\define</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\define\manage.c">
+      <Filter>Source Files\define</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\define\module.c">
+      <Filter>Source Files\define</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fileio\extension.c">
+      <Filter>Source Files\fileio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fileio\legacy.c">
+      <Filter>Source Files\fileio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fileio\scan.c">
+      <Filter>Source Files\fileio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\caver.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\common.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\damlev.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\editdist.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\extension.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\hamming.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\jarowin.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\leven.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\osadist.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\phonetic.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\rsoundex.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\soundex.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\translit.c">
+      <Filter>Source Files\fuzzy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ipaddr\extension.c">
+      <Filter>Source Files\ipaddr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\extension.c">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vsv\extension.c">
+      <Filter>Source Files\vsv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\uuid\extension.c">
+      <Filter>Source Files\uuid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\unicode\extension.c">
+      <Filter>Source Files\unicode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\duration.c">
+      <Filter>Source Files\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\extension.c">
+      <Filter>Source Files\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\time.c">
+      <Filter>Source Files\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\bstring.c">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\extension.c">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\rstring.c">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\runes.c">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\utf8\case.c">
+      <Filter>Source Files\text\utf8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\utf8\rune.c">
+      <Filter>Source Files\text\utf8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\utf8\utf8.c">
+      <Filter>Source Files\text\utf8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stats\extension.c">
+      <Filter>Source Files\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stats\scalar.c">
+      <Filter>Source Files\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stats\series.c">
+      <Filter>Source Files\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\extension.c">
+      <Filter>Source Files\regexp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\regexp.c">
+      <Filter>Source Files\regexp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_auto_possess.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_chartables.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_compile.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_config.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_context.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_convert.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_dfa_match.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_error.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_extuni.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_find_bracket.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_fuzzsupport.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_maketables.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_match.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_match_data.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_newline.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_ord2utf.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_pattern_info.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_script_run.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_serialize.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_string_utils.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_study.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_substitute.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_substring.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_tables.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_ucd.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_valid_utf.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_xclass.c">
+      <Filter>Source Files\regexp\pcre2</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

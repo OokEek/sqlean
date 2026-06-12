@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\crypto\base32.h" />
+    <ClInclude Include="..\..\src\crypto\base64.h" />
+    <ClInclude Include="..\..\src\crypto\base85.h" />
+    <ClInclude Include="..\..\src\crypto\blake3.h" />
+    <ClInclude Include="..\..\src\crypto\extension.h" />
+    <ClInclude Include="..\..\src\crypto\hex.h" />
+    <ClInclude Include="..\..\src\crypto\md5.h" />
+    <ClInclude Include="..\..\src\crypto\sha1.h" />
+    <ClInclude Include="..\..\src\crypto\sha2.h" />
+    <ClInclude Include="..\..\src\crypto\url.h" />
+    <ClInclude Include="..\..\src\crypto\xxhash.h" />
+    <ClInclude Include="..\..\src\define\define.h" />
+    <ClInclude Include="..\..\src\define\extension.h" />
+    <ClInclude Include="..\..\src\fileio\extension.h" />
+    <ClInclude Include="..\..\src\fileio\fileio.h" />
+    <ClInclude Include="..\..\src\fuzzy\common.h" />
+    <ClInclude Include="..\..\src\fuzzy\extension.h" />
+    <ClInclude Include="..\..\src\fuzzy\fuzzy.h" />
+    <ClInclude Include="..\..\src\ipaddr\extension.h" />
+    <ClInclude Include="..\..\src\math\extension.h" />
+    <ClInclude Include="..\..\src\regexp\constants.h" />
+    <ClInclude Include="..\..\src\regexp\extension.h" />
+    <ClInclude Include="..\..\src\regexp\pcre2\config.h" />
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2.h" />
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2_internal.h" />
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2_intmodedep.h" />
+    <ClInclude Include="..\..\src\regexp\pcre2\pcre2_ucp.h" />
+    <ClInclude Include="..\..\src\regexp\regexp.h" />
+    <ClInclude Include="..\..\src\sqlean.h" />
+    <ClInclude Include="..\..\src\stats\extension.h" />
+    <ClInclude Include="..\..\src\stats\stats.h" />
+    <ClInclude Include="..\..\src\text\bstring.h" />
+    <ClInclude Include="..\..\src\text\extension.h" />
+    <ClInclude Include="..\..\src\text\rstring.h" />
+    <ClInclude Include="..\..\src\text\runes.h" />
+    <ClInclude Include="..\..\src\text\utf8\groups.h" />
+    <ClInclude Include="..\..\src\text\utf8\rune.h" />
+    <ClInclude Include="..\..\src\text\utf8\tables.h" />
+    <ClInclude Include="..\..\src\text\utf8\utf8.h" />
+    <ClInclude Include="..\..\src\time\extension.h" />
+    <ClInclude Include="..\..\src\time\timex.h" />
+    <ClInclude Include="..\..\src\unicode\extension.h" />
+    <ClInclude Include="..\..\src\uuid\extension.h" />
+    <ClInclude Include="..\..\src\vsv\extension.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\crypto\base32.c" />
+    <ClCompile Include="..\..\src\crypto\base64.c" />
+    <ClCompile Include="..\..\src\crypto\base85.c" />
+    <ClCompile Include="..\..\src\crypto\blake3.c" />
+    <ClCompile Include="..\..\src\crypto\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_crypto.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_crypto.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_crypto.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_crypto.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hex.c" />
+    <ClCompile Include="..\..\src\crypto\md5.c" />
+    <ClCompile Include="..\..\src\crypto\sha1.c" />
+    <ClCompile Include="..\..\src\crypto\sha2.c" />
+    <ClCompile Include="..\..\src\crypto\url.c" />
+    <ClCompile Include="..\..\src\crypto\xxhash.c" />
+    <ClCompile Include="..\..\src\define\eval.c" />
+    <ClCompile Include="..\..\src\define\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_define.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_define.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_define.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_define.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\define\manage.c" />
+    <ClCompile Include="..\..\src\define\module.c" />
+    <ClCompile Include="..\..\src\fileio\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_fileio.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_fileio.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_fileio.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_fileio.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fileio\legacy.c" />
+    <ClCompile Include="..\..\src\fileio\scan.c" />
+    <ClCompile Include="..\..\src\fuzzy\caver.c" />
+    <ClCompile Include="..\..\src\fuzzy\common.c" />
+    <ClCompile Include="..\..\src\fuzzy\damlev.c" />
+    <ClCompile Include="..\..\src\fuzzy\editdist.c" />
+    <ClCompile Include="..\..\src\fuzzy\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_fuzzy.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_fuzzy.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_fuzzy.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_fuzzy.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fuzzy\hamming.c" />
+    <ClCompile Include="..\..\src\fuzzy\jarowin.c" />
+    <ClCompile Include="..\..\src\fuzzy\leven.c" />
+    <ClCompile Include="..\..\src\fuzzy\osadist.c" />
+    <ClCompile Include="..\..\src\fuzzy\phonetic.c" />
+    <ClCompile Include="..\..\src\fuzzy\rsoundex.c" />
+    <ClCompile Include="..\..\src\fuzzy\soundex.c" />
+    <ClCompile Include="..\..\src\fuzzy\translit.c" />
+    <ClCompile Include="..\..\src\ipaddr\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_ipaddr.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_ipaddr.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_ipaddr.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_ipaddr.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_math.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_math.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_math.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_math.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_regexp.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_regexp.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_regexp.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_regexp.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_auto_possess.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_chartables.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_compile.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_config.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_context.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_convert.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_dfa_match.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_error.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_extuni.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_find_bracket.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_fuzzsupport.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_maketables.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_match.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_match_data.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_newline.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_ord2utf.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_pattern_info.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_script_run.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_serialize.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_string_utils.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_study.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_substitute.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_substring.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_tables.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_ucd.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_valid_utf.c" />
+    <ClCompile Include="..\..\src\regexp\pcre2\pcre2_xclass.c" />
+    <ClCompile Include="..\..\src\regexp\regexp.c" />
+    <ClCompile Include="..\..\src\sqlite3-sqlean.c" />
+    <ClCompile Include="..\..\src\stats\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_stats.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_stats.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_stats.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_stats.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stats\scalar.c" />
+    <ClCompile Include="..\..\src\stats\series.c" />
+    <ClCompile Include="..\..\src\text\bstring.c" />
+    <ClCompile Include="..\..\src\text\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_text.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_text.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_text.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_text.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\rstring.c" />
+    <ClCompile Include="..\..\src\text\runes.c" />
+    <ClCompile Include="..\..\src\text\utf8\case.c" />
+    <ClCompile Include="..\..\src\text\utf8\rune.c" />
+    <ClCompile Include="..\..\src\text\utf8\utf8.c" />
+    <ClCompile Include="..\..\src\time\duration.c" />
+    <ClCompile Include="..\..\src\time\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_time.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_time.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_time.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_time.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\time.c" />
+    <ClCompile Include="..\..\src\unicode\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_unicode.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_unicode.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_unicode.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_unicode.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\uuid\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_uuid.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_uuid.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_uuid.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_uuid.o</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vsv\extension.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)extension_vsv.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)extension_vsv.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)extension_vsv.o</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)extension_vsv.o</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c6d93d20-2f9c-44b2-b50d-727829faf989}</ProjectGuid>
+    <RootNamespace>sqlean</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)custom.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)custom.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)custom.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)custom.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)..\src;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\dist\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)..\src;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\dist\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)..\src;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\dist\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)..\src;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\dist\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SQLEAN_VERSION="$(SQLEAN_VERSION)";_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;SQLEAN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+      <ForcedIncludeFiles>$(SolutionDir)..\src\regexp\constants.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SQLEAN_VERSION="$(SQLEAN_VERSION)";_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;SQLEAN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+      <ForcedIncludeFiles>$(SolutionDir)..\src\regexp\constants.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SQLEAN_VERSION="$(SQLEAN_VERSION)";_CRT_SECURE_NO_WARNINGS;_DEBUG;SQLEAN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+      <ForcedIncludeFiles>$(SolutionDir)..\src\regexp\constants.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SQLEAN_VERSION="$(SQLEAN_VERSION)";_CRT_SECURE_NO_WARNINGS;NDEBUG;SQLEAN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+      <ForcedIncludeFiles>$(SolutionDir)..\src\regexp\constants.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
