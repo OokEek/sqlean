@@ -3,17 +3,44 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="crypto/crypto.vcxproj" Id="2cf3f443-cedd-4493-a703-c9f1d603221a" />
-  <Project Path="define/define.vcxproj" Id="0a64e021-6ec3-4982-98c4-e079224507c6" />
-  <Project Path="fileio/fileio.vcxproj" Id="75938168-9f52-42c1-aea3-09dc96e08816" />
-  <Project Path="fuzzy/fuzzy.vcxproj" Id="298ba24d-c87c-470f-840e-2032adabd734" />
-  <Project Path="ipaddr/ipaddr.vcxproj" Id="e7929c57-754f-49b7-939c-a9e09db640ce" />
-  <Project Path="math/math.vcxproj" Id="37c7e4b2-be02-4b0a-9b7b-932e8280e87c" />
-  <Project Path="regexp/regexp.vcxproj" Id="8cd1a731-799a-4c90-bb23-b99360930eed" />
-  <Project Path="stats/stats.vcxproj" Id="ab6aa05b-c0e0-4e0f-a532-83c5a3703e5a" />
-  <Project Path="text/text.vcxproj" Id="2f720e6d-a4da-4c7e-8528-86620853f216" />
-  <Project Path="time/time.vcxproj" Id="3bd0e56f-0b8e-4a29-9d84-811ed9904b50" />
-  <Project Path="unicode/unicode.vcxproj" Id="71bb731b-68dc-4f32-9959-52a0b09e8dd6" />
-  <Project Path="uuid/uuid.vcxproj" Id="bfe4fbc1-9c52-4383-b809-d1d1eb1364b7" />
-  <Project Path="vsv/vsv.vcxproj" Id="42538406-44ed-4be0-a5cb-7bf34d653530" />
+  <Project Path="crypto/crypto.vcxproj" Id="2cf3f443-cedd-4493-a703-c9f1d603221a">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="define/define.vcxproj" Id="0a64e021-6ec3-4982-98c4-e079224507c6">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="fileio/fileio.vcxproj" Id="75938168-9f52-42c1-aea3-09dc96e08816">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="fuzzy/fuzzy.vcxproj" Id="298ba24d-c87c-470f-840e-2032adabd734">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="GetFiles/GetFiles.vcxproj" Id="733538fc-548c-4b1a-b48a-d1492a5a1be6" />
+  <Project Path="ipaddr/ipaddr.vcxproj" Id="e7929c57-754f-49b7-939c-a9e09db640ce">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="math/math.vcxproj" Id="37c7e4b2-be02-4b0a-9b7b-932e8280e87c">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="regexp/regexp.vcxproj" Id="8cd1a731-799a-4c90-bb23-b99360930eed">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="stats/stats.vcxproj" Id="ab6aa05b-c0e0-4e0f-a532-83c5a3703e5a">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="text/text.vcxproj" Id="2f720e6d-a4da-4c7e-8528-86620853f216">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="time/time.vcxproj" Id="3bd0e56f-0b8e-4a29-9d84-811ed9904b50">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="unicode/unicode.vcxproj" Id="71bb731b-68dc-4f32-9959-52a0b09e8dd6">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="uuid/uuid.vcxproj" Id="bfe4fbc1-9c52-4383-b809-d1d1eb1364b7">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
+  <Project Path="vsv/vsv.vcxproj" Id="42538406-44ed-4be0-a5cb-7bf34d653530">
+    <BuildDependency Project="GetFiles/GetFiles.vcxproj" />
+  </Project>
 </Solution>
